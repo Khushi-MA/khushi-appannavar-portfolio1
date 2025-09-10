@@ -29,8 +29,9 @@ const services = [
 		links: [
 			{
 				label: 'Two column Research paper',
-				url: 'docs/s1-paper.docx'
-			},
+				url: '${process.env.PUBLIC_URL}/docs/s1-paper.docx'
+			}
+			// ,
 			// {
 			// 	label: 'LinkedIn Post',
 			// 	url: 'https://www.linkedin.com/in/khushi-appannavar/details/projects/'

@@ -23,7 +23,7 @@ function Navbar() {
       </nav>
       <div className={`sidebar ${sidebarOpen ? "open" : ""}`}>
         <ul className="sidebar-links">
-          <li><Link to="/" onClick={toggleSidebar}>Home</Link></li>
+          <li><a href="/khushi-appannavar-portfolio1/#home" onClick={toggleSidebar}>Home</a></li>
           <li><a href="/khushi-appannavar-portfolio1/#about" onClick={toggleSidebar}>About</a></li>
           <li><a href="/khushi-appannavar-portfolio1/#projects" onClick={toggleSidebar}>Projects</a></li>
           <li><a href="/khushi-appannavar-portfolio1/#experience" onClick={toggleSidebar}>Experience</a></li>
@@ -33,7 +33,7 @@ function Navbar() {
           <li><a href="/khushi-appannavar-portfolio1/#services" onClick={toggleSidebar}>Services</a></li>
           <li><a href="/khushi-appannavar-portfolio1/#education" onClick={toggleSidebar}>Education</a></li>
           <li><a href="/khushi-appannavar-portfolio1/#contact" onClick={toggleSidebar}>Contact Me</a></li>
-          <li><Link to="/beyond" onClick={toggleSidebar}>Beyond</Link></li>
+          <li><Link to="/khushi-appannavar-portfolio1/beyond" onClick={toggleSidebar}>Beyond</Link></li>
           <li><a href="/khushi-appannavar-portfolio1/beyond#books" onClick={toggleSidebar}>Books</a></li>
         </ul>
       </div>
