@@ -7,8 +7,8 @@ const projects = [
     id: 2,
     title: 'Food Distribution System',
     subtitle: 'Web Development · Spring Boot · React.js · SQL',
-    image: 'p (4).png',
-    images: ['p (4).png', 'p (2).png', 'p (3).png','p (4).png', 'p (2).png'],
+    image: `${process.env.PUBLIC_URL}/p (4).png`,
+    images: [`${process.env.PUBLIC_URL}/p (4).png`, `${process.env.PUBLIC_URL}/p (2).png`, `${process.env.PUBLIC_URL}/p (3).png`, `${process.env.PUBLIC_URL}/p (4).png`, `${process.env.PUBLIC_URL}/p (2).png`],
     description: `Built a website to connect surplus food holders (restaurants and individuals) with NGOs.
 • Tools & Technologies: SpringBoot, SQL, ReactJs
 • Role: Designed and implemented the database schema and developed RESTful APIs using Java for data handling. Also responsible for designing the user interface with React.
@@ -28,8 +28,8 @@ const projects = [
     id: 3,
     title: 'IPL Ticket Booking using NFT Tokens',
     subtitle: 'Blockchain · NFTs · MetaMask · Ethereum · Documentation',
-    image: 'p (2).png',
-    images: ['p (2).png'],
+    image: `${process.env.PUBLIC_URL}/p (2).png`,
+    images: [`${process.env.PUBLIC_URL}/p (2).png`],
     description: `Developed a secure, user-friendly NFT marketplace for buying IPL tickets.
 • Tools & Technologies: Ethereum, NFT (ERC-127), Ganache, Metamask, React JS
 • Role: Front-end development, research paper writing. Developed the website's front end, ensured seamless interactions, and documented the project for a research paper.
@@ -59,7 +59,7 @@ const projects = [
     id: 4,
     title: 'Multilingual Text Classification using IndicCorp Dataset',
     subtitle: 'ML · NLP · DNN · Unsupervised Learning',
-    image: 'p (3).png',
+    image: `${process.env.PUBLIC_URL}/p (3).png`,
     images: [],
     description: `To detect languages in a multilingual environment, a Multinomial Naive Bayes classifier is applied to the IndicCorp dataset, achieving 73.37% accuracy in identifying Indian languages like Hindi, Bengali, Tamil, etc.
 • Skills: Natural Language Processing (NLP) · Unsupervised Learning · Deep Neural Networks (DNN)`,
@@ -78,8 +78,8 @@ const projects = [
     id: 5,
     title: 'Twitter Sentiment Analysis',
     subtitle: 'NLP · LLM · DNN · ML · BERT · Sentiment Analysis',
-    image: 'p (1).png',
-    images: ['p (1).png'],
+    image: `${process.env.PUBLIC_URL}/p (1).png`,
+    images: [`${process.env.PUBLIC_URL}/p (1).png`],
     description: `Developed a sentiment analysis model utilizing TF-IDF and DistilBERT to accurately classify text-based content into positive or negative sentiments.
 • Tools & Technologies: Python, HuggingFace Twitter Dataset, TF-IDF + Logical Regression/Linear SVC, DistilBERT
 • Role: Managed data preprocessing and evaluating model performance metrics
@@ -174,9 +174,8 @@ const Projects = ({ onPopupOpen, onPopupClose }) => {
         <span className="info-text">
           {/* Click on a project card to read more about it.<br /> */}
           <strong className='tip-header'>Icon information:</strong><br />
-          <img src="icon/github.png" alt="GitHub Icon" className="link-image-alternate" /> - GitHub Repository<br />
-          <img src="icon/linkedin.png" alt="LinkedIn Icon" className="link-image-alternate" /> - LinkedIn Post<br />
-          <img src="icon/ieee.png" alt="IEEE Icon" className="link-image-alternate" /> - IEEE Paper
+          <img src={`${process.env.PUBLIC_URL}/icon/github.png`} alt="GitHub Icon" className="link-image-alternate" /> - GitHub Repository<br />
+          <img src={`${process.env.PUBLIC_URL}/icon/linkedin.png`} alt="LinkedIn Icon" className="link-image-alternate" /> - LinkedIn Post<br />
         </span>
       </div>
       <div className="projects-grid">
@@ -207,17 +206,15 @@ const Projects = ({ onPopupOpen, onPopupClose }) => {
                   title={link.label}
                 >
                   {link.label === 'GitHub Repository' ? (
-                    <img
-                      src="icon/github.png"
-                      alt={link.label}
-                      className='link-image-alternate'
-                    />
+                    // <img
+                    //   src="icon/github.png"
+                    //   alt={link.label}
+                    //   className='link-image-alternate'
+                    // />
+                    <i data-feather="github" alt={link.label} className="link-image-alternate"></i>
                   ) : link.label === 'LinkedIn Post' ? (
-                    <img
-                      src="icon/linkedin.png"
-                      alt={link.label}
-                      className='link-image-alternate'
-                    />
+                    <i data-feather="linkedin" alt={link.label} className="link-image-alternate"></i>
+
                   ) : link.image ? (
                     <img
                       src={link.image}

@@ -117,17 +117,9 @@ const Publications = ({ onPopupOpen, onPopupClose }) => {
 										title={link.label}
 									>
 										{link.label === 'GitHub Repository' ? (
-											<img
-												src="icon/github.png"
-												alt={link.label}
-												className="link-image-alternate"
-											/>
+											<i data-feather="github" alt={link.label} className="link-image-alternate"></i>
 										) : link.label === 'LinkedIn Post' ? (
-											<img
-												src="icon/linkedin.png"
-												alt={link.label}
-												className="link-image-alternate"
-											/>
+											<i data-feather="linkedin" alt={link.label} className="link-image-alternate"></i>
 										) : link.image ? (
 											<img
 												src={link.image}

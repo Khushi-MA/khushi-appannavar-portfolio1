@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Beyond.css';
-import Services from './Services';
-import BooksSection from './books';
+import BooksSection from './Books';
 
 function Beyond() {
   const [isPopupActive, setIsPopupActive] = useState(false);
@@ -28,11 +27,6 @@ function Beyond() {
 
   return (
     <div className={`beyond-page${isPopupActive ? ' popup-active' : ''}`}>
-      {/* <h1>Beyond</h1>
-      <p>Welcome to the Beyond page! Add your content here.</p> */}
-      {/* <section id="services" className="fade-in">
-        <Services onPopupOpen={handlePopupOpen} onPopupClose={handlePopupClose} />
-      </section> */}
       <section id="books" className="fade-in">
         <BooksSection />
       </section>
