@@ -94,6 +94,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainContent handlePopupOpen={handlePopupOpen} handlePopupClose={handlePopupClose} />} />
           <Route path="/beyond" element={<Beyond />} />
+          <Route path="*" element={<MainContent handlePopupOpen={handlePopupOpen} handlePopupClose={handlePopupClose} />} />
         </Routes>
       </div>
     </Router>
