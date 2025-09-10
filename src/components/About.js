@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import feather from 'feather-icons';
 import './About.css';
 
 function ParticleBackground() {
@@ -127,6 +128,9 @@ function About() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+  useEffect(() => {
+    feather.replace();
+  }, []);
 
   return (
     <div className="about-section">
@@ -137,7 +141,24 @@ function About() {
           <p style={{ textAlign: "justify" }}>
             Hello! I'm Khushi. :) I'm a Computer Science student at KLE Technological University, Hubballi. <br /> (currently in 7th semester) <br />
             I’m an eager learner working towards improving myself. I’m passionate about coding and I’m always looking for opportunities to learn new things. I’m a quick learner and
-            I’m keen to explore new ideas/hobbies.
+            I’m keen to explore new ideas/hobbies.<br />
+            <a
+              href={`${process.env.PUBLIC_URL}/docs/resume.pdf`}
+              download
+              className="resume-download-btn highlight-colour1"
+            >
+              Resume
+              <i data-feather="file-text" className="resume-icon"></i>
+            </a>
+            <a
+              href="https://linkedin.com/in/khushi-appannavar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="linkedin-btn highlight-colour1"
+            >
+              LinkedIn
+              <i data-feather="linkedin" className="resume-icon"></i>
+            </a>
           </p>
         </div>
         <div className="about-photo-wrapper">

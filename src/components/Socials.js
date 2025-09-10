@@ -10,7 +10,7 @@ const Socials = () => {
   return (
     <div className="footer-social">
       <a
-        href="https://www.linkedin.com/company/haegl-technologies-pvt-ltd/"
+        href="linkedin.com/in/khushi-appannavar"
         target="_blank"
         rel="noopener noreferrer"
         title="LinkedIn"

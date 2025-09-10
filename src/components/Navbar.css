@@ -1,7 +1,5 @@
 /* Import the colors */
 @import './colours.css';
-/* @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Asimovian&display=swap');
 
 .navbar {
     display: flex;
@@ -58,7 +56,7 @@
 
 /* Logo Text */
 .logo-text {
-    font-family: "Asimovian";
+    font-family: var(--title-font);
     font-size: 1.5rem;
     color: #000000;
     font-weight: 700;
