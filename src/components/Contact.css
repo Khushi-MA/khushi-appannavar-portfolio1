@@ -82,14 +82,10 @@
 
 }
 
-.send-button:hover {
+.send-button:hover, .send-button:active {
   background-color: var(--unit-hover-background);
   box-shadow: var(--unit-shadow-hover);
-}
-
-.send-button:active {
-  background-color: var(--unit-active-background);
-  box-shadow: var(--unit-shadow-active);
+  border: 1px solid var(--highlight-colour1);
 }
 
 /* Placeholder Styles */
@@ -156,4 +152,10 @@
     font-size: 0.8rem;
     padding: 0.5rem 1rem;
   }
+
+  .send-button:active {
+  background-color: var(--highlight-colour1);
+  box-shadow: var(--unit-shadow-hover);
+  border: 1px solid black;
+}
 }

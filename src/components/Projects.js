@@ -45,7 +45,7 @@ const projects = [
         // image: 'icon/linkedin.png'
       },
       {
-        label: 'IEEE Paper',
+        label: 'IEEE',
         url: 'https://doi.org/10.1109/ICEI64305.2024.10912206',
         // image: 'icon/ieee.png'
       },
@@ -215,12 +215,6 @@ const Projects = ({ onPopupOpen, onPopupClose }) => {
                   ) : link.label === 'LinkedIn Post' ? (
                     <img
                       src="icon/linkedin.png"
-                      alt={link.label}
-                      className='link-image-alternate'
-                    />
-                  ) : link.label === 'IEEE Paper' ? (
-                    <img
-                      src="icon/ieee.png"
                       alt={link.label}
                       className='link-image-alternate'
                     />
