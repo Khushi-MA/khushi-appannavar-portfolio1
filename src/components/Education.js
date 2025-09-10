@@ -4,7 +4,7 @@ import './Education.css';
 const Education = () => {
   const educationData = [
     {
-      logo: 'logo/logo_uni.png', // Replace with the actual path to the KLE logo
+      logo: `${process.env.PUBLIC_URL}/logo/logo_uni.png`, // Replace with the actual path to the KLE logo
       name: 'KLE Technological University - Hubballi (India)',
       degree: 'Bachelor of Engineering - BE, Computer Science',
       duration: '2021 - 2026',
@@ -26,7 +26,7 @@ const Education = () => {
       ],
     },
     {
-      logo: 'logo/logo_college.png', // Replace with the actual path to the Chetan PU logo
+      logo: `${process.env.PUBLIC_URL}/logo/logo_college.png`, // Replace with the actual path to the Chetan PU logo
       name: 'Chetan PU Science College, Hubli',
       degree: 'Pre University Degree, Science (PCMB)',
       duration: '2019 - 2021',
@@ -36,7 +36,7 @@ const Education = () => {
       ],
     },
     {
-      logo: 'logo/logo_school.png', // Replace with the actual path to the Guru Nanak Dev Public School logo
+      logo: `${process.env.PUBLIC_URL}/logo/logo_school.png`, // Replace with the actual path to the Guru Nanak Dev Public School logo
       name: 'Guru Nanak Dev Public School, Bidar, Karnataka',
       degree: 'Schooling, CBSE',
       duration: '2009 - 2019',

@@ -5,98 +5,99 @@ const certifications = [
   {
     id: 1,
     title: 'Indian Sign Language (Intermediate)',
-    image: 'certifications/Interprix intermidiate.jpg',
+    image: `${process.env.PUBLIC_URL}/certifications/Interprix intermidiate.jpg`,
+
     skills: 'Indian Sign Language · ISL',
     link: 'https://www.linkedin.com/in/khushi-appannavar/details/certifications/1793366/multiple-media-viewer?profileId=ACoAADnqyrkBwKGBo_j7B5Ge0YR1b7o-8buion0&treasuryMediaId=1731994794254&type=DOCUMENT&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BhqBqmG75QcqbGtdTLPQc5g%3D%3D'
   },
   {
     id: 2,
     title: 'Indian Sign Language (Beginner)',
-    image: 'certifications/Interprix beginner.jpg',
+    image: `${process.env.PUBLIC_URL}/certifications/Interprix beginner.jpg`,
     skills: 'Indian Sign Language · ISL',
     link: 'https://www.linkedin.com/in/khushi-appannavar/details/certifications/1793366/multiple-media-viewer?profileId=ACoAADnqyrkBwKGBo_j7B5Ge0YR1b7o-8buion0&treasuryMediaId=1722283682612&type=DOCUMENT&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BhqBqmG75QcqbGtdTLPQc5g%3D%3D'
   },
   {
     id: 3,
     title: 'AWS Academy Graduate - AWS Academy Cloud Foundations',
-    image: 'certifications/AWS Academy Cloud Foundations Badge.jpg',
+    image: `${process.env.PUBLIC_URL}/certifications/AWS Academy Cloud Foundations Badge.jpg`,
     skills: 'Cloud · AWS · Architecture',
     link: 'https://www.credly.com/badges/7c4a83b6-eafe-4f6f-a944-f03b96379a4d/linked_in_profile'
   },
   {
     id: 4,
     title: 'Introduction to Ethereum Blockchain',
-    image: 'certifications/Introduction to Etherium Blockchain.jpg',
+    image: `${process.env.PUBLIC_URL}/certifications/Introduction to Etherium Blockchain.jpg`,
     skills: 'Ethereum · Blockchain · MetaMask · Smart Contracts',
     link: 'https://coursera.org/share/5b6dedcc888f5088642a34eb8e383a01'
   },
   {
     id: 5,
     title: 'Fundamentals of Java Programming',
-    image: 'certifications/Fundamentals of Java programming.jpg',
+    image: `${process.env.PUBLIC_URL}/certifications/Fundamentals of Java programming.jpg`,
     skills: 'Java · Programming',
     link: 'https://coursera.org/verify/5GRQ5MRNYWKK'
   },
   {
     id: 6,
     title: 'Kubernetes Course from a DevOps guru (Kubernetes&Docker)',
-    image: 'certifications/Kubernetes Course from a DevOps guru (Kubernetes&Docker).jpg',
+    image: `${process.env.PUBLIC_URL}/certifications/Kubernetes Course from a DevOps guru (Kubernetes&Docker).jpg`,
     skills: 'Kubernetes · DevOps · Kind · Docker',
     link: 'https://www.linkedin.com/in/khushi-appannavar/details/certifications/1718249333179/single-media-viewer?type=DOCUMENT&profileId=ACoAADnqyrkBwKGBo_j7B5Ge0YR1b7o-8buion0&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BhqBqmG75QcqbGtdTLPQc5g%3D%3D'
   },
   {
     id: 7,
     title: 'Networking Basics',
-    image: 'certifications/Networking_Basics_Badge.jpg',
+    image: `${process.env.PUBLIC_URL}/certifications/Networking_Basics_Badge.jpg`,
     skills: 'Networking',
     link: 'https://www.credly.com/badges/95b54d53-786e-45ab-b480-7301270dafdc/linked_in_profile'
   },
   {
     id: 8,
     title: 'Participation in WED Hackathon 2024',
-    image: 'certifications/WED Hackathon 2024.jpg',
+    image: `${process.env.PUBLIC_URL}/certifications/WED Hackathon 2024.jpg`,
     skills: 'Hackathon · Teamwork · Brain Storming',
     link: 'https://credsverse.com/credentials/24f7141d-a570-44ee-8f02-697387a7e766'
   },
   {
     id: 9,
     title: 'Web Development and Designing',
-    image: 'certifications/OasisInfoByte.jpg',
+    image: `${process.env.PUBLIC_URL}/certifications/OasisInfoByte.jpg`,
     skills: 'Web Development · Designing · Problem Solving',
     link: 'https://www.linkedin.com/posts/khushi-appannavar_internship-webdevelopment-design-activity-7162500745475375104-30in?utm_source=share&utm_medium=member_desktop&rcm=ACoAADnqyrkBwKGBo_j7B5Ge0YR1b7o-8buion0'
   },
   {
     id: 10,
     title: 'Entrepreneurship Development Program',
-    image: 'certifications/Turnip EDP.jpg',
+    image: `${process.env.PUBLIC_URL}/certifications/Turnip EDP.jpg`,
     skills: 'Entrepreneurship · EDP · Business Development',
     link: 'https://www.linkedin.com/in/khushi-appannavar/details/certifications/1709328875974/single-media-viewer?type=DOCUMENT&profileId=ACoAADnqyrkBwKGBo_j7B5Ge0YR1b7o-8buion0&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B3w5rqfkfRWiGCu0s1mo1WA%3D%3D'
   },
   {
     id: 11,
     title: 'Hex Workshop',
-    image: 'certifications/Hex workshop.jpg',
+    image: `${process.env.PUBLIC_URL}/certifications/Hex workshop.jpg`,
     skills: 'Hex Editing · Workshop',
     link: 'https://www.linkedin.com/posts/khushi-appannavar_hands-on-design-assembly-of-regulated-dc-activity-7169563059143856128-_HGA?utm_source=share&utm_medium=member_desktop&rcm=ACoAADnqyrkBwKGBo_j7B5Ge0YR1b7o-8buion0'
   },
   {
     id: 12,
     title: 'KnitSpace Workshop',
-    image: 'certifications/KnitSpace Workshop.jpeg',
+    image: `${process.env.PUBLIC_URL}/certifications/KnitSpace Workshop.jpeg`,
     skills: 'System Design and Analysis',
     link: 'https://www.linkedin.com/posts/khushi-appannavar_workshop-systems-systemdesign-activity-7269676992315162624-Va31?utm_source=share&utm_medium=member_desktop&rcm=ACoAADnqyrkBwKGBo_j7B5Ge0YR1b7o-8buion0'
   },
   {
     id: 13,
     title: 'Software Testing by Srinivasan Desikan',
-    image: 'certifications/Software Testing Srinivasan Desikan.png',
+    image: `${process.env.PUBLIC_URL}/certifications/Software Testing Srinivasan Desikan.png`,
     skills: 'Software Testing · Automation Testing · Selenium IDE',
     link: 'https://www.linkedin.com/posts/khushi-appannavar_seleniumide-automationtesting-learning-activity-7150735572712460290-VtD-?utm_source=share&utm_medium=member_desktop&rcm=ACoAADnqyrkBwKGBo_j7B5Ge0YR1b7o-8buion0'
   },
   {
     id: 14,
     title: 'Version Control',
-    image: 'certifications/Version control.jpg',
+    image: `${process.env.PUBLIC_URL}/certifications/Version control.jpg`,
     skills: 'Git · GitHub · Version Control',
     link: 'https://www.linkedin.com/posts/khushi-appannavar_introduction-to-version-control-using-git-activity-7169556417945743360-2jCr?utm_source=share&utm_medium=member_desktop&rcm=ACoAADnqyrkBwKGBo_j7B5Ge0YR1b7o-8buion0'
   }
@@ -149,11 +150,13 @@ function Certifications() {
           onClick={() => setShowList((prev) => !prev)}
           title={showList ? "Show carousel" : "Show all as list"}
         >
+          {/* <img src={process.env.PUBLIC_URL + "/logo192.png"} alt="Logo" /> */}
           <img
             src={showList ? "icon/view-carousel-white.png" : "icon/view-list-white.png"}
             alt={showList ? "Carousel View" : "List View"}
             className="list-btn-icon"
           />
+          
         </button>
       </div>
       {showList ? (

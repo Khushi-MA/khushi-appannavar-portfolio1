@@ -8,9 +8,9 @@ const Experience = ({ onPopupOpen, onPopupClose }) => {
   const experiences = [
     {
       company: 'Haegl Technologies Pvt. Ltd., Hubballi',
-      logo: 'logo/logo-haegl-white.png', // Add logo path if available, else leave empty
+      logo: `${process.env.PUBLIC_URL}/logo/logo-haegl-white.png`, // Add logo path if available, else leave empty
       location: 'Hubballi, Karnataka, India',
-      images: ['p (4).png', 'p (2).png', 'p (3).png'],
+      images: [`${process.env.PUBLIC_URL}/p (4).png`, `${process.env.PUBLIC_URL}/p (2).png`, `${process.env.PUBLIC_URL}/p (3).png`],
       roles: [
         {
           title: 'Research Assistant',
@@ -48,7 +48,7 @@ const Experience = ({ onPopupOpen, onPopupClose }) => {
     },
     {
       company: 'Nature Conservation Foundation (in collaboration with Bird Count India)',
-      logo: 'logo/logo-ncf-ful-white.png',
+      logo: `${process.env.PUBLIC_URL}/logo/logo-ncf-ful-white.png`,
       location: '',
       images: [], // Add image paths if available, else leave empty
       roles: [
@@ -73,9 +73,9 @@ const Experience = ({ onPopupOpen, onPopupClose }) => {
     },
     {
       company: 'KLETech-Center of Excellence in Visual Intelligence (CEVI)',
-      logo: 'logo/logo-cevi-white.png',
+      logo: `${process.env.PUBLIC_URL}/logo/logo-cevi-white.png`,
       location: 'Hubballi, Karnataka, India',
-      images: ['p (1).png', 'p (2).png', 'p (3).png'],
+      images: [`${process.env.PUBLIC_URL}/p (1).png`, `${process.env.PUBLIC_URL}/p (2).png`, `${process.env.PUBLIC_URL}/p (3).png`],
       roles: [
         {
           title: 'Project Intern',
@@ -89,9 +89,9 @@ const Experience = ({ onPopupOpen, onPopupClose }) => {
     },
     {
       company: 'Make in BVB (MiB)',
-      logo: 'logo/logo-mib-white.png',
+      logo: `${process.env.PUBLIC_URL}/logo/logo-mib-white.png`,
       location: 'KLE Technological University, Hubballi',
-      images: ['p (4).png', 'p (2).png', 'p (3).png'],
+      images: [`${process.env.PUBLIC_URL}/p (4).png`, `${process.env.PUBLIC_URL}/p (2).png`, `${process.env.PUBLIC_URL}/p (3).png`],
       roles: [
         {
           title: 'Student President',

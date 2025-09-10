@@ -142,7 +142,7 @@ function About() {
         </div>
         <div className="about-photo-wrapper">
           <img 
-            src={isSmallScreen ? "rename iiii.png" : "rename ii.jpg"} 
+            src={isSmallScreen ? `${process.env.PUBLIC_URL}/rename iiii.png` : `${process.env.PUBLIC_URL}/rename ii.jpg`} 
             alt="There should've been my photo here!!" 
             className="about-photo" 
             onError={e => {
