@@ -1,0 +1,232 @@
+:root {
+  --number-of-lines: 3;  
+  --project-link-bg: #00000055;
+  --project-link-bg-hover: #00000044;
+  --project-link-color: #fff;
+}
+
+.projects-section {
+  padding: 2rem;
+  position: relative;
+  /* min-height: 100vh; */
+  z-index: 1;
+}
+
+.projects-section::before {
+  position: absolute;
+  inset: 0;
+  filter: blur(2px);
+  z-index: -1;
+  pointer-events: none;
+  transform: scale(1.05);
+}
+
+.projects-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.projects-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.projects-header {
+  align-items: left;
+  margin-bottom: 0.8rem;
+}
+
+/* Responsive grid layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  row-gap: 3rem;
+  column-gap: 1rem;
+  padding: 0rem;
+  padding-bottom: 3rem;
+}
+
+/* Responsive breakpoints for projects grid */
+@media (min-width: 1400px) {
+  .projects-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 1399px) and (min-width: 1100px) {
+  .projects-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1099px) and (min-width: 850px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 849px) and (min-width: 600px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .projects-grid {
+    grid-template-columns: repeat(1, 1fr);
+    /* column-gap: 10rem; */
+    row-gap: 3rem;
+  }
+  
+  .project-card {
+    padding: 0.8rem;
+  }
+  
+  .project-image {
+    height: 6rem;
+  }
+}
+
+/* Responsive adjustments for projects section */
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 1rem;
+  }
+  
+  .projects-header {
+    margin-bottom: 1rem;
+  }
+}
+
+.project-card {
+  display: flex;
+  gap: 0rem;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: var(--unit-border);
+  box-shadow: var(--unit-shadow-normal);
+  background: var(--unit-background);
+  backdrop-filter: blur(10px);
+  transform: translateY(0) scale(1);
+}
+
+.project-card:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--unit-shadow-hover);
+  /* background: var(--unit-background-hover-colour); */
+}
+
+.project-image {
+  width: 100%;
+  height: 7rem;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: var(--unit-image-border-shadow);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-list-subtitle{
+  font-size: 0.9rem;
+}
+.project-description {
+  line-height: 1.5;
+  margin: 0px;
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: var(--number-of-lines);
+  -webkit-box-orient: vertical;
+  line-clamp: var(--number-of-lines);
+  overflow: hidden;
+  max-height: 6em;
+  font-size: 0.8rem;
+
+}
+
+.project-description a:hover {
+  text-decoration: underline;
+}
+
+.know-more {
+  display: block;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-decoration: underline;
+}
+
+/* info note tip  */
+.info-note {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+  z-index: 2; /* Ensure it appears in front */
+}
+
+.info-icon {
+  display: inline-block;
+  background: var(--button-background);
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  cursor: pointer;
+}
+
+.info-text {
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s;
+  position: absolute;
+
+  color: var(--tip-text);
+  /* color: white; */
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  top: 2rem;
+  left: 0;
+  z-index: 3; /* Higher z-index to ensure it appears above other elements */
+  white-space: nowrap;
+  font-size: 0.8rem;
+
+  line-height: 2;
+
+}
+
+.tip-header {
+  font-size: 1rem;
+  color: var(--highlight-colour1);
+}
+
+.info-note:hover .info-text {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  background: var(--tip-background);
+  border: var(--tip-box-border);
+
+}
+
+::placeholder {
+  color: red;
+}

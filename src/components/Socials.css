@@ -1,0 +1,44 @@
+/* New footer-social styles */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+
+  background-color:var(--background-navbar);
+}
+
+.footer-social a {
+    color: var(--paragraph-colour);
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: var(--highlight-colour1);
+    text-decoration: underline;
+    /* background: linear-gradient(90deg, rgba(255, 0, 0, 0.173), rgba(180, 180, 24, 0.067)); */
+}
+
+.feather-id {
+  font-family: 'Trebuchet MS';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--paragraph-colour);
+  transition: color 0.3s;
+  text-align: center;
+}
+.footer-social a:hover .feather-id {
+  color: var(--highlight-colour1);
+}
+
+/* Desktop-specific styling */
+@media (min-width: 769px) {
+    .footer-bottom {
+        flex-direction: column;
+    }
+}

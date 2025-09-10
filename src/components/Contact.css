@@ -1,0 +1,159 @@
+/* General Styles */
+.contact-section {
+  padding: 2rem;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Form Styles */
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.form-left,
+.form-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 0;
+}
+
+.input-field,
+.message-body {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: var(--unit-border);
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  background: var(--unit-background); /* 25% transparent */
+  font-family: var(--total-font);
+  box-shadow: var(--unit-shadow-hover);
+  color: azure;
+}
+
+.input-field:focus,
+.message-body:focus {
+  outline: none;
+  box-shadow: var(--unit-shadow-hover);
+}
+
+/* Center the form container and ensure padding applies */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem; /* Add padding to ensure uniform spacing */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Ensure textarea has a fixed size and is responsive */
+.message-body {
+  resize: none; /* Disable resizing */
+  height: 110px; /* Default height */
+  max-height: 200px; /* Maximum height */
+  overflow-y: auto; /* Enable scrolling for long content */
+  transition: height 0.3s ease-in-out, max-height 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Send Button Styles */
+.send-button {
+  background-color: var(--unit-background);
+  color: azure;
+  border: var(--unit-border);
+  border-radius: 5px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-family: var(--total-font);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  margin-bottom: 1rem;
+
+}
+
+.send-button:hover {
+  background-color: var(--unit-hover-background);
+  box-shadow: var(--unit-shadow-hover);
+}
+
+.send-button:active {
+  background-color: var(--unit-active-background);
+  box-shadow: var(--unit-shadow-active);
+}
+
+/* Placeholder Styles */
+::placeholder {
+  color: beige;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-form {
+    flex-direction: column;
+    align-items: center;
+    transition: flex-direction 0.3s ease-in-out, gap 0.3s ease-in-out; /* Smooth transition */
+  }
+
+  .form-container {
+    flex-direction: column;
+    gap: 0rem;
+    width: 100%;
+    padding: 0 1rem; /* Add padding for smaller screens */
+  }
+
+  .form-left,
+  .form-right {
+    width: 100%;
+  }
+
+  .input-field,
+  .message-body {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .message-body {
+    height: 120px; /* Adjust height for smaller screens */
+    max-height: 130px;
+  }
+
+  .send-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .input-field,
+  .message-body {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+
+  .message-body {
+    height: 100px; /* Further adjust height for very small screens */
+    max-height: 120px;
+  }
+
+  .send-button {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+}

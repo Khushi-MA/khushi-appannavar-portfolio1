@@ -1,0 +1,108 @@
+/* Main container is fixed and aligns children vertically */
+.hover {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 9000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Remove fixed from tip container, let parent handle it */
+.hover-tip-container {
+  position: relative;
+  z-index: 1;
+}
+
+.scroll-to-top-container {
+  margin-bottom: 8px;
+}
+
+.hover-tip-icon {
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  
+  background: var(--button-background);
+  color: var(--highlight-colour1);
+  /* give text a black border colour */
+  text-shadow: 1px 1px 2px black;
+  box-shadow: var(--unit-shadow-normal);
+}
+
+.scroll-to-top-btn {
+  width: 28px;
+  height: 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: var(--button-background);
+  color: var(--highlight-colour1);
+  text-shadow: 1px 1px 2px black;
+  box-shadow: var(--unit-shadow-normal);
+  margin: 6px;
+  padding: 0;
+  margin-bottom: 8px;
+  transition: transform 0.2s;
+}
+
+.scroll-to-top-btn:hover {
+  transform: translateY(-2px) scale(1.08);
+}
+
+.scroll-to-top-btn:active {
+  transform: scale(0.95);
+}
+
+.hover-tip-box {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  width: 250px;
+  color: var(--tip-text);
+  box-shadow: var(--unit-shadow-normal);
+  background: var(--tip-background);
+  border: var(--tip-box-border);
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s;
+  transform: scale(0.95);
+}
+
+.hover-tip-box h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  color: var(--highlight-colour1);
+}
+
+.hover-tip-box ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hover-tip-box li {
+  margin-bottom: 0.5rem;
+}
+
+.hover-tip-container:hover .hover-tip-box {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hover-tip-container:hover {
+  transform: translateY(-3px);
+}

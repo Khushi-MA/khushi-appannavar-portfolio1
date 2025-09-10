@@ -1,0 +1,190 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure popup is on top */
+    animation: fadeIn 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    backdrop-filter: blur(3px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+    }
+    to {
+        opacity: 1;
+        backdrop-filter: blur(3px);
+    }
+}
+
+.popup-content {
+    background-color: var(--unit-background);
+    backdrop-filter: blur(1px);
+    padding: 2rem;
+    border-radius: 10px;
+
+    position: relative;
+    height: 80vh;
+    max-height: 80vh;
+    width: 80vw;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    top: unset;
+    left: unset;
+    transform: unset;
+}
+
+.popup-inner {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.popup-content:has(.popup-details, .popup-images) {
+    height: auto; /* Adjust height dynamically based on content */
+    max-height: calc(100vh - 6rem); /* Ensure it doesn't exceed screen height */
+    overflow-y: auto; /* Ensure scrolling for large content */
+}
+
+@keyframes slideInScale {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 700px) {
+    .popup-content {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        width: 95vw;
+        height: 90vh;
+        max-height: 90vh;
+    }
+    .popup-inner {
+        height: 100%;
+    }
+}
+
+.popup-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.popup-image {
+    width: calc(20% - 1rem); /* 5 images per row */
+    max-width: 200px;
+    max-height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.popup-image:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 1024px) {
+    .popup-image {
+        width: calc(33.33% - 1rem); /* 3 images per row */
+    }
+}
+
+@media (max-width: 700px) {
+    .popup-image {
+        width: calc(50% - 1rem); /* 2 images per row */
+    }
+}
+
+.popup-details {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-right: 1rem;
+    color: rgb(240, 235, 221);
+}
+
+.popup-title {
+    margin-bottom: 0.5rem;
+}
+
+.popup-subtitle {
+    margin-bottom: 1.2rem;
+}
+
+.popup-description {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.popup-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.popup-link {
+    padding: 0.3rem 0.5rem;
+    background: gold;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: scale(1);
+}
+
+.popup-link:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--hover-colour);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.close-btn:hover {
+    color: #333;
+    background: rgba(255, 255, 255, 0.335);
+
+}

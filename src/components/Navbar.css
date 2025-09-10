@@ -1,0 +1,214 @@
+/* Import the colors */
+@import './colours.css';
+/* @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Asimovian&display=swap');
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: var(--unit-background); */
+    background: transparent;
+    padding: 0 1rem;
+    height: 56px;
+    position: fixed; /* changed from sticky to fixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    /* border-bottom: var(--unit-border); */
+    transition: background-color 0.3s, box-shadow 0.3s, top 0.8s, opacity 0.8s;
+    color: var(--highlight-colour2);
+    /* color: white; */
+}
+
+.navbar.navbar-transparent {
+    /* background-color: transparent !important; */
+    background-color: rgba(0, 0, 0, 0.100) !important;
+    box-shadow: none;
+    border-bottom: none;
+}
+
+/* Hide navbar when not hovered at top and sidebar is closed */
+.navbar.navbar-hidden {
+    opacity: 0;
+    pointer-events: none;
+    top: -56px;
+}
+
+.navbar-logo {
+    flex: 0 0 auto;
+}
+
+.logo-link {
+    /* display: block; */
+    height: 48px; /* Fixed height for the logo */
+    width: auto; /* Maintain aspect ratio */
+    align-items: center;
+    /* vertically align inside items as middle */
+    display: flex;
+    text-decoration: none; /* Remove underline */
+    justify-content: center; /* Center logo horizontally */
+}
+
+.logo {
+    height: 100%; /* Ensures logo scales proportionally within the navbar */
+    object-fit: contain;
+}
+
+/* Logo Text */
+.logo-text {
+    font-family: "Asimovian";
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.47);
+    user-select: none;
+    /* Adjust as needed for your navbar height */
+    line-height: 1;
+    display: inline-block;
+    padding: 0rem;
+    margin: 0.2em 0.5em;
+    /* background-color: rgba(0, 0, 0, 0.678); */
+    /* text-shadow: 1px 1px 0.5px white; */
+    text-shadow: 1px 1px 0.5px var(--highlight-colour2);
+    /* background-color: var(--unit-background); */
+}
+
+/* Navbar Links */
+.navbar-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li a {
+    color: var(--bg1-colour); /* Using variable */
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    /* font-size: 5rem; */
+    position: relative;
+    transition: color 0.3s cubic-bezier(.4,0,.2,1);
+    /* Remove transform transition, add underline effect below */
+    overflow: hidden;
+}
+
+.navbar-links li a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0.3em;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--hover-underline-colour1) 0%, var(--hover-underline-colour2) 100%);
+    border-radius: 2px;
+    transition: width 0.35s cubic-bezier(.4,0,.2,1), left 0.35s cubic-bezier(.4,0,.2,1);
+    z-index: 1;
+}
+
+.navbar-links li a:hover,
+.navbar-links li a:focus {
+    color: var(--link-hover-colour);
+    background: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    /* No background, no border, just underline and color */
+}
+
+.navbar-links li a:hover::after,
+.navbar-links li a:focus::after {
+    width: 80%;
+    left: 10%;
+}
+
+/* Hamburger Button */
+.navbar-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--bg1-colour); /* Using variable */
+    cursor: pointer;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -20rem; /* Initially hidden */
+    width: 10rem;
+    height: 100%;
+    background: var(--background-navbar);
+    transition: right 0.3s ease;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid black;
+    padding: 0.5rem;
+    padding-top: 3rem;
+
+}
+
+.sidebar.open {
+    right: 0; /* Slide in when open */
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar-links li {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar-links li a {
+    text-decoration: none;
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    /* background-color: red; */
+    display: block;
+    margin-top: 0.1rem;
+}
+
+.sidebar-links li a:hover {
+    color: rgb(0, 0, 0);
+    background-color: var(--highlight-colour1);
+    /* border: 1px solid black; */
+    border-radius: 8px;
+    color: black;
+    font-weight:500;
+}
+
+/* Hide navbar when popup is open */
+body.popup-open .navbar {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    top: -56px !important;
+}
+
+body.popup-open .sidebar {
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 880px) {
+    /* Hide links initially and show the hamburger */
+    .navbar-links {
+        display: none;
+    }
+
+    .navbar-toggle {
+        display: block; /* Show hamburger on mobile */
+    }
+}

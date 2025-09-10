@@ -1,4 +1,7 @@
-.App {
+/* ##check this output */
+/* https://css-tricks.com/accessible-font-sizing-explained/#aa-avoid-setting-a-base-font-size */
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +38,261 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+
+/* Define all colors as CSS variables */
+:root {
+
+  --projects-bg-gradient: linear-gradient(135deg, #0b0a1d 0%, #260f24 15%, #311227 30%, #41182c 45%, #492c2e 60%, #371429 80%, #2e1126 100%);
+
+  --h1-colour: rgb(255, 239, 214);
+  --h2-colour: rgb(255, 255, 255);
+  --h3-colour: rgb(228, 255, 225);
+  --h4-colour: rgb(240, 243, 255);
+  --paragraph-colour:rgba(245, 245, 220, 0.733);
+
+  --h3-light-colour: rgba(228, 255, 225, 0.684);
+
+  --link-hover-colour: rgb(255, 255, 180);
+  --hover-underline-colour1: rgba(255, 223, 180, 0.500);
+  --hover-underline-colour2: rgba(255, 182, 219, 0.500);
+
+
+
+}
+
+:root{
+  --primary-color: #333;
+  --secondary-color: #555;
+  --unit-shadow-normal: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --unit-shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.15);
+  --unit-background: #1b1b1ba8;
+  --unit-border: 1px solid rgba(150, 150, 150, 0.381);
+
+  --background-navbar: #111111df;
+
+  --button-background: #3a3a3acf;
+  --button-hover-background: #4c4c4ccf;
+
+  --tip-background: #3f3e3e;
+  --tip-text: #ffffff;
+  --tip-box-border: 1px solid rgba(150, 150, 150, 0.381);
+
+
+  --link-colour: #fffdf0;
+
+  --highlight-colour1: #ffcc00;
+  --highlight-colour2: #ffe16b;
+
+}
+
+
+
+h1 {
+  font-size: 2.5rem;
+  /* margin-bottom: 1rem; */
+  /* Using variable for text color */
+  color: var(--h1-colour);
+  text-align: center;
+  margin: 0%;
+  margin-bottom: 1rem;
+  margin-top: 0rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: var(--h2-colour);
+  font-weight: bold;
+  margin: 0px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: var(--h3-colour);
+  font-weight: bold;
+
+  margin: 0px;
+}
+
+h4 {
+  font-size: 1rem;
+  color: var(--h4-colour);
+  margin: 0px;
+  /* margin-top: 0.5rem; */
+  font-weight: bold;
+}
+
+title {
+  color: var(--h1-colour);
+}
+
+a {
+  color: var(--link-colour);
+}
+
+
+
+
+
+.subheading {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--subheading-colour);
+  margin: 0%;
+  margin-top: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  margin: 0%;
+  /* margin-top: 1rem; */
+  /* color:rgb(50, 50, 50); */
+  color: var(--paragraph-colour);
+}
+
+
+section {
+  border-top: none;
+  border-bottom: none;
+  margin: 0%;
+  padding: 0%;
+  margin: none;
+  margin-top: 0rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  margin-bottom: 0rem;
+}
+
+ul {
+  margin: 0px;
+}
+
+
+
+.project-list-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.2rem;
+  /* margin-bottom: 0.2rem; */
+}
+
+.project-list-link {
+  padding: 0.3rem 0.7rem;
+  background: var(--project-link-bg);
+  color: var(--project-link-color);
+  border: var(--unit-border);
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  transform: scale(1);
+  box-shadow: 0 1px 1px rgba(101, 101, 101, 0.135); /* Add shadow */
+}
+
+
+.project-list-link:hover {
+  opacity: 0.9;
+  background: var(--project-link-bg-hover);
+  transform: var(--project-link-transform-hover);
+}
+
+
+.link-image-alternate {
+  height: 1.2em;
+  vertical-align: middle;
+  margin: none;
+  filter: brightness(0.95) drop-shadow(0 0 2px #fff2);
+}
+
+.list-btn:hover,
+.list-btn:focus {
+  background: var(--button-hover-background);
+  outline: none;
+}
+
+.list-btn {
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s;
+  margin-left: 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-background);
+}
+
+.list-btn-icon {
+  width: 1.3em;
+  height: 1.3em;
+  display: block;
+}
+
+.photo-alt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #ffb347, #ffcc80);
+  color: #333;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  min-height: 180px;
+  min-width: 180px;
+  padding: 1rem;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: none;
+  padding: 0px;
+  border: none;
+  background-color: rgb(0, 0, 0);
+}
+
+.App {
+  /* fix photo back */
+  background:linear-gradient(rgba(0, 0, 0, 0.900), rgba(10, 10, 10, 0.900)),
+
+    url('/public/background/home-bg6.png') center center/cover no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  padding: 0%;
+  border: none;
+  margin: 0%;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+::selection {
+  background: var(--highlight-colour1); /* Custom background color */
+  color: #000; /* Custom text color */
 }
